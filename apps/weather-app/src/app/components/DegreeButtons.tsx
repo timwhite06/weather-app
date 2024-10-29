@@ -1,12 +1,17 @@
 'use client'
 import React, { useState } from 'react';
 
-function TemperatureSwitcher() {
-  const [selectedUnit, setSelectedUnit] = useState('C'); // Default to Celsius
+interface TemperatureSwitcherProps {
+  onUnitChange: (unit: string) => void;
+}
+
+function TemperatureSwitcher({ onUnitChange }: TemperatureSwitcherProps) {
+  const [selectedUnit, setSelectedUnit] = useState('C');
 
   // Function to handle the unit change
   const handleUnitChange = (unit: string) => {
     setSelectedUnit(unit);
+    onUnitChange(unit);
   };
 
   return (

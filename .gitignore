@@ -43,3 +43,12 @@ Thumbs.db
 # Next.js
 .next
 out
+
+# ingore env files
+.env
+.env.*
+.env.local
+.env.development
+.env.test
+.env.production
+
