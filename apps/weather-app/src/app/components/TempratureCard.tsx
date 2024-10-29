@@ -2,7 +2,7 @@ import React from 'react';
 
 interface WeatherMetricsProps {
     title: string;
-    degrees: number;
+    degrees: string;
 }
 
 const TemperatureCard: React.FC<WeatherMetricsProps> = ({ title, degrees }) => {
@@ -12,7 +12,7 @@ const TemperatureCard: React.FC<WeatherMetricsProps> = ({ title, degrees }) => {
       <div className="card bg-[#030e33] w-full shadow-xl">
         <div className="card-body">
           <h2 className="card-title w-full flex justify-center">{title}</h2>
-          <div className="w-full flex justify-center text-xl">{degrees}</div>
+          <div className="w-full flex justify-center text-3xl font-bold">{degrees}</div>
         </div>
       </div>
     </div>

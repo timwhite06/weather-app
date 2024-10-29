@@ -18,7 +18,7 @@ const WeatherMetrics: React.FC<WeatherMetricsProps> = ({ title, valueAsPercent }
       <div className="card bg-[#030e33] w-full shadow-xl flex-1 h-full">
         <div className="card-body text-center">
           <h2 className="card-title w-full flex justify-center">{title}</h2>
-          <div className="w-full flex justify-center text-xl">{valueAsPercent}%</div>
+          <div className="w-full flex justify-center text-3xl font-bold">{valueAsPercent}%</div>
           <div className='mt-auto'>
              <div className="w-full flex justify-end">%</div>
             {/* Apply the dynamic progress class */}
