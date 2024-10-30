@@ -1,0 +1,18 @@
+{
+    "builds": [
+      {
+        "src": "apps/weather-app/package.json",
+        "use": "@vercel/next",
+        "config": {
+          "distDir": "dist/apps/weather-app/.next"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/apps/weather-app/$1"
+      }
+    ]
+  }
+  
