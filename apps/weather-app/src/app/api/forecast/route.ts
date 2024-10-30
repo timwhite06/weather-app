@@ -36,6 +36,7 @@ export async function GET(req: Request) {
         dayLabel: day.datetime === tomorrowStr ? "Tomorrow" : new Date(day.datetime).toLocaleDateString('en-US', { weekday: 'long' })
       }));
 
+      console.log(dailyForecast)
     return NextResponse.json({ dailyForecast }, { status: 200 });
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 });
