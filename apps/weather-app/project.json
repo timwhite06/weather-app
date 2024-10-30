@@ -1,8 +1,32 @@
 {
   "name": "weather-app",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/weather-app",
+  "sourceRoot": "apps/weather-app/src",
   "projectType": "application",
-  "targets": {},
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/weather-app",
+        "root": "apps/weather-app",
+        "sourceRoot": "apps/weather-app/src"
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "weather-app:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "weather-app:build:production"
+        }
+      }
+    }
+  },
   "tags": []
 }
